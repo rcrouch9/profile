@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  font-family: var(--font-amiko), sans-serif;
+}
+
+body {
+  font-family: var(--font-amiko), sans-serif;
+  @apply antialiased;
+}
+
+h1 {
+  font-family: var(--font-geist-sans), sans-serif;
+}
