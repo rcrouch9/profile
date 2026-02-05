@@ -4,18 +4,6 @@ import { useState, useEffect } from "react";
 import { Github, Linkedin, FileText, Mail, Copy, Check, Download, ScanEye } from "lucide-react";
 
 export default function Menu() {
-  
-  const colors = [
-    '#3b83f6c0',
-    '#ef4444c0',
-    '#22c55ec0',
-    '#a855f7c0',
-    '#f97316c0',
-  ];
-  const random_hex = colors[Math.floor(Math.random() * colors.length)];
-  useEffect(() => {
-    document.documentElement.style.setProperty('--primary-color', random_hex);
-  }, []);
 
   const [copied, setCopied] = useState(false);
   const email = "russcrouch9@gmail.com";

@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { tr } from "motion/react-client";
 import Image from "next/image";
 
 export default function Profile() {
@@ -40,7 +39,7 @@ export default function Profile() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="pointer-events-none w-150 relative z-10 text-center p-10 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl"
+      className="pointer-events-s w-150 relative z-10 text-center p-10 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl"
     >
       <motion.div variants={itemVariants} className="relative inline-block w-40 h-40 mb-6">
         <div className="pointer-events-auto cursor-pointer relative w-full h-full rounded-full border-2 shadow-xl overflow-hidden"
