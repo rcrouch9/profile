@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Amiko } from "next/font/google";
 import Grid from "../components/backgroundGrid";
+import Themer from "../components/themer";
 import Nav from "../components/nav";
 import Menu from "../components/menu";
 import "../styles/globals.css";
+import Orb from "../components/orb";
 
 const amiko = Amiko({
   variable: "--font-amiko",
@@ -36,11 +38,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${amiko.variable} antialiased`}
       >
+        <Themer/>
         <header className="fixed z-10">
           <Nav />
         </header>
-        <Grid/>
         <Menu/>
+        <Orb/>
         {children}
       </body>
     </html>

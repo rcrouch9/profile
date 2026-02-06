@@ -8,12 +8,11 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-html::-webkit-scrollbar {
-  display: none;
-}
-
 :root {
   font-family: var(--font-amiko), sans-serif;
+  --primary-color: none;
+  --secondary-color: none;
+  --tertiary-color: none;
 }
 
 body {
