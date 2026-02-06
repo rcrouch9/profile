@@ -32,6 +32,7 @@ export default function Orb() {
         animate-blob 
         mix-blend-multiply
         animation-delay-2000 
+        will-change-transform
         -z-10"
         />
     )

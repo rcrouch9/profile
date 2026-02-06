@@ -27,17 +27,17 @@ export default function Menu() {
                         href={tile.href ?? "#"}
                         target={"_self"}
                         style={{ borderColor: primaryColor }}
-                        className="h-18 w-18 rounded-md border-2 bg-white flex items-center justify-center pointer-events-auto cursor-pointer relative z-20"
+                        className="h-18 w-18 rounded-md border-2 bg-white flex items-center justify-center pointer-events-auto cursor-pointer relative z-20 bg-gradient-to-tr from-[var(--secondary-color)] via-[var(--tertiary-color)] to-[var(--primary-color)]"
                         variants={{
                             initial: { 
                                 scale: 1, 
                                 backgroundColor: "#ffffff", 
-                                color: primaryColor
+                                color: "#ffffff"
                             },
                             hovered: {
                                 scale: 1.1,
                                 backgroundColor: primaryColor,
-                                color: "#ffffff"
+                                color: primaryColor
                             }
                         }}
                     >

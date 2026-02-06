@@ -82,7 +82,7 @@ export default function Experiences() {
                     <motion.div
                         key={exp.id}
                         variants={itemVariants}
-                        className="flex flex-col md:flex-row gap-10 md:items-baseline pb-4 pointer-events-none w-200 relative z-10 text-center p-10 rounded-2xl bg-[var(--primary-color)]/20 backdrop-blur-sm border border-white/20 shadow-xl"
+                        className="flex flex-col md:flex-row gap-10 md:items-baseline pb-4 pointer-events-none w-200 relative z-10 text-center p-10 rounded-2xl bg-[var(--primary-color)]/20 backdrop-blur-m border border-white/20 shadow-xl"
                     >
                         <div className="md:w-1/3">
                             <h3 className="text-xl font-bold text-gray-800">{exp.company}</h3>
