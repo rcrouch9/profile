@@ -57,7 +57,9 @@ export default function Profile() {
       <motion.h1 variants={itemVariants} className="text-6xl font-bold text-gray-900 mb-2 ">
         Hi, I'm <span style={{ color: primaryColor }}>Russ!</span>
       </motion.h1>
-      <Skills/>
+      <motion.p variants={itemVariants}>
+        <Skills/>
+      </motion.p>
     </motion.div>
   );
 }

@@ -6,7 +6,8 @@ const roles = [
   "Full Stack Developer",
   "Geospatial Analyst", 
   "QA Automation Engineer",
-  "Remote Sensing Specialist"
+  "Remote Sensing Specialist",
+  "Enjoyer of Food"
 ];
 
 export default function Skills() {
@@ -15,7 +16,7 @@ export default function Skills() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % roles.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
@@ -28,7 +29,7 @@ export default function Skills() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl text-gray-500 font-medium"
+          className="text-2xl text-gray-500"
         >
           {roles[index]}
         </motion.p>
