@@ -34,7 +34,7 @@ export default function Projects() {
           </h1>
           <div className="p-8 border-2 border-dashed border-gray-200 rounded-2xl">
             <p className="text-lg text-gray-500 italic">
-              Building something awesome... check back soon!
+              Building some cool stuff... coming soon!
             </p>
           </div>
         </div>
