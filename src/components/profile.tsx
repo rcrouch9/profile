@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Skills from "./skills";
 
 export default function Profile() {
   const primaryColor = "var(--primary-color)";
@@ -56,9 +57,7 @@ export default function Profile() {
       <motion.h1 variants={itemVariants} className="text-6xl font-bold text-gray-900 mb-2 ">
         Hi, I'm <span style={{ color: primaryColor }}>Russ!</span>
       </motion.h1>
-      <motion.p variants={itemVariants} className="text-2xl text-gray-500">
-        Full Stack Developer
-      </motion.p>
+      <Skills/>
     </motion.div>
   );
 }

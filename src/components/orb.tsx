@@ -20,7 +20,7 @@ export default function Orb() {
         left-1/2 
         -translate-x-1/2 
         -translate-y-1/2 
-        w-[1000px] 
+        w-[1100px] 
         h-[700px]
         bg-gradient-to-tr
         from-[var(--primary-color)]

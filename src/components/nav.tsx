@@ -52,7 +52,7 @@ export default function Menu() {
                             }}
                             transition={{ type: "spring", stiffness: 200, damping: 40 }}
                             style={{ borderColor: primaryColor }}
-                            className="absolute top-full w-18 bg-white border-2 rounded-md flex flex-col items-center py-4 shadow-xl overflow-hidden z-10"
+                            className="absolute top-full w-18 bg-white/10 border-2 rounded-md flex flex-col items-center py-4 shadow-xl overflow-hidden z-10 "
                         >
                             <ColorScale />
                         </motion.div>
