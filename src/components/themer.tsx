@@ -1,20 +1,22 @@
 "use client";
 
 import { useEffect } from "react";
+import { colors } from "../app/constants/colors";
 
 export default function Themer() {
-  useEffect(() => {
+    const primary_colors = colors.map(c => c.primary_hex);
+    const secondary_colors = colors.map(c => c.secondary_hex);
+    const tertiary_colors = colors.map(c => c.tertiary_hex);
 
-    const primary_colors = ["#3b83f6", "#ec4899", "#10b981", "#f59e0b", "#8b5cf6"];
-    const secondary_colors = ["#22c55e'", "#fbcfe8", "#6ee7b7", "#fcd34d", "#c4b5fd"];
-    const tertiary_colors = ["#00ccff", "#831843", "#065f46", "#92400e", "#5b21b6"];
-    const random_index = Math.floor(Math.random() * primary_colors.length);
+    useEffect(() => {
 
-    document.documentElement.style.setProperty('--primary-color', primary_colors[random_index]);
-    document.documentElement.style.setProperty('--secondary-color', secondary_colors[random_index]);
-    document.documentElement.style.setProperty('--tertiary-color', tertiary_colors[random_index]);
-    
-  }, []);
+        const random_index = Math.floor(Math.random() * primary_colors.length);
 
-  return null;
+        document.documentElement.style.setProperty('--primary-color', primary_colors[random_index]);
+        document.documentElement.style.setProperty('--secondary-color', secondary_colors[random_index]);
+        document.documentElement.style.setProperty('--tertiary-color', tertiary_colors[random_index]);
+
+    }, []);
+
+    return null;
 }

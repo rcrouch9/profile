@@ -12,13 +12,13 @@ export default function Home() {
 
   return (
     <main ref={scrollContainerRef} className="relative h-screen w-full overflow-y-scroll snap-y snap-proximity scroll-smooth">
-      <StickyComponent className="z-10" scrollContainer={scrollContainerRef}>
+      <StickyComponent className="z-10" scrollContainer={scrollContainerRef} id="profile">
         <Profile />
       </StickyComponent>
-      <StickyComponent className="z-10" scrollContainer={scrollContainerRef}>
+      <StickyComponent className="z-10" scrollContainer={scrollContainerRef} id="experience">
         <Experiences />
       </StickyComponent>
-      <StickyComponent className="z-10" scrollContainer={scrollContainerRef}>
+      <StickyComponent className="z-10" scrollContainer={scrollContainerRef} id="projects">
          <Projects />
       </StickyComponent>
     </main>

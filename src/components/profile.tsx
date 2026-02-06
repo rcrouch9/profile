@@ -39,10 +39,10 @@ export default function Profile() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="pointer-events-s w-150 relative z-10 text-center p-10 rounded-2xl bg-white/40 backdrop-blur-sm border border-white/20 shadow-xl"
+      className="pointer-events-s w-150 relative z-10 text-center p-10 rounded-2xl bg-[var(--primary-color)]/20 backdrop-blur-sm border border-white/20 shadow-xl "
     >
       <motion.div variants={itemVariants} className="relative inline-block w-40 h-40 mb-6">
-        <div className="pointer-events-auto cursor-pointer relative w-full h-full rounded-full border-2 shadow-xl overflow-hidden"
+        <div className="pointer-events-auto cursor-pointer relative w-full h-full rounded-full border-2 shadow-xl overflow-hidden drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
         style={{ borderColor: primaryColor }}>
           <Image
             src="/profile-photo.jpg"
@@ -53,7 +53,7 @@ export default function Profile() {
         </div>
       </motion.div>
 
-      <motion.h1 variants={itemVariants} className="text-6xl font-bold text-gray-900 mb-2">
+      <motion.h1 variants={itemVariants} className="text-6xl font-bold text-gray-900 mb-2 ">
         Hi, I'm <span style={{ color: primaryColor }}>Russ!</span>
       </motion.h1>
       <motion.p variants={itemVariants} className="text-2xl text-gray-500">

@@ -7,9 +7,10 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   scrollContainer: React.RefObject<HTMLElement | null>;
+  id?: string;
 }
 
-export default function StickyComponent({ children, className = "", scrollContainer }: Props) {
+export default function StickyComponent({ children, className = "", scrollContainer, id }: Props) {
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -17,17 +18,19 @@ export default function StickyComponent({ children, className = "", scrollContai
     container: scrollContainer,
     offset: ["start start", "end start"],
   });
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.75]);
   const y = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
+  const blur = useTransform(scrollYProgress, [0, 0.3], ["blur(0px)", "blur(4px)"]);
+  //const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   //const rotate = useTransform(scrollYProgress, [0, 0.3], [0, 10]);
-  //const blur = useTransform(scrollYProgress, [0, 0.3], ["blur(0px)", "blur(4px)"]);
+  
 
   return (
-    <div ref={sectionRef} className={`relative h-[90vh] pointer-events-none snap-center  ${className}`}>
+    <div ref={sectionRef} id={id} className={`relative h-[90vh] pointer-events-none snap-center  ${className}`}>
       <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
         <motion.div 
-          style={{ opacity, scale, y, /*rotate , filter: blur*/ }} 
+          style={{ scale, y, filter:blur, /* opacity, rotate */ }} 
           className="w-full h-full flex flex-col items-center justify-center"
         >
           {children}

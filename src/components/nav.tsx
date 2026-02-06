@@ -1,15 +1,17 @@
 'use client';
 import { motion } from "framer-motion";
-import { House, ChartNoAxesColumnIncreasing, Ellipsis } from "lucide-react";
+import { UserRound, ChartNoAxesColumnIncreasing, Briefcase, PaintRoller, Presentation } from "lucide-react";
 import ColorScale from "./colorScale";
 
 export default function Menu() {
     const primaryColor = "var(--primary-color)";
 
     const linkTiles = [
-        { label: "Home", href: "/", icon: <House size={24}/> },
-        { label: "Leaderboard", href: "/leaderboard", icon: <ChartNoAxesColumnIncreasing size={24}/> },
-        { label: "More", href: null, icon: <Ellipsis size={24}/>, isMore: true },
+        { label: "Profile", href: "#profile", icon: <UserRound size={24}/> },
+        /* { label: "Leaderboard", href: "/leaderboard", icon: <ChartNoAxesColumnIncreasing size={24}/> }, */
+        { label: "Experience", href: "#experience", icon: <Briefcase size={24}/> },
+        { label: "Projects", href: "#projects", icon: <Presentation size={24}/> },
+        { label: "More", href: null, icon: <PaintRoller size={24}/>, isMore: true },
     ];
 
     return (
